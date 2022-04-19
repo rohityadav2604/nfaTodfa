@@ -1,0 +1,457 @@
+#body{
+  padding: 0;
+  margin: 0;
+}
+header{
+  font-family: "Lucida Grande";
+  background-color:#26d0c9;
+  color:white;
+  height:100px;
+  font-style:#fff;
+}
+.header-logo{
+  font-family: "Lucida Grande";
+  height: 250px;
+  font-weight: 700;
+  font-size:50px;
+  padding-top: 10px;
+  text-align: center;
+}
+.instructions {
+  margin-bottom: 0px;
+}
+
+ul.instructions-list {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  list-style-type: circle;
+  background-color: white;
+  padding-left: 30px;
+}
+.btn {
+  margin-right: 5px;
+}
+
+.col-xs-nt,
+.col-xs-pr {
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.col-xs-nt {
+  float: left;
+  min-width: 60px;
+  width: 5.5%;
+}
+
+.col-xs-pr {
+  float: left;
+  min-width: 100px;
+  width: 9%;
+}
+
+div.arrow,
+div.or,
+div.remove {
+  display: inline-block;
+  float: left;
+  font-size: 20px;
+  height: 34px;
+  line-height: 34px;
+  vertical-align: middle;
+}
+
+div.production-row {
+  min-height: 34px;
+  margin: 5px 17px;
+  font-size: larger;
+}
+
+span.remove-button {
+  margin-left: 5px;
+}
+
+span.remove-button:hover {
+  background: #555555;
+  border-radius: 10px;
+  color: #AAAAAA;
+  cursor: pointer;
+}
+
+div.new-production {
+  margin-top: 10px;
+  min-width: 480px;
+}
+
+#resetBtn{
+  align-self: center;
+  margin-left: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  align:center;
+}
+/*///////////////////////// Enter more state /////////////*/
+#new-transition{
+  margin:auto;
+  width: 100%;
+  border: 3px solid rgb(16, 165, 165);
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  align:center;
+}
+/* ////////////////////////////////////////////////// */
+
+/*////////////// TO Show NFA /////////////////*/
+#nfa {
+  margin-top: 10px;
+  padding: 10px 0px;
+}
+#toshowNFA{
+  /* margin:auto; */
+  display:block;
+}
+#tohideNFA{
+  /* margin:auto; */
+  display:none;
+}
+#current-nfa {
+  /* margin-left: 15px; */
+  display:none;
+}
+.TOSHOWNFA{
+  /* margin:auto; */
+}
+/* Button */
+#toshowNFA {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#toshowNFA span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#toshowNFA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#toshowNFA:hover span {
+  padding-right: 25px;
+}
+
+#toshowNFA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* Button */
+#tohideNFA {
+  display: none;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#tohideNFA span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#tohideNFA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#tohideNFA:hover span {
+  padding-right: 25px;
+}
+
+#tohideNFA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*////////////// TO Show DFA /////////////////*/
+#toshowDFA{
+  display: block;
+}
+#tohideDFA{
+  /* margin:auto; */
+  display:none;
+}
+#current-dfa {
+  /* margin:auto; */
+  display:none;
+  /* margin-left: 15px; */
+}
+.TOSHOWDFA{
+  /* margin:auto; */
+}
+/* Button */
+#toshowDFA {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#toshowDFA span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#toshowDFA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#toshowDFA:hover span {
+  padding-right: 25px;
+}
+
+#toshowDFA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* Button */
+#tohideDFA {
+  display:none;
+  /* display: inline-block; */
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#tohideDFA span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#tohideDFA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#tohideDFA:hover span {
+  padding-right: 25px;
+}
+
+#tohideDFA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*////////////// TO Show Minimized DFA /////////////////*/
+#toshowMinimizedDFA{
+  display: block;
+}
+#tohideMinimizedDFA{
+  /* margin:auto; */
+  display:none;
+}
+#current-dfa-minimized {
+  margin:auto; 
+  display:none;
+  margin-left: 15px;
+}
+.TOSHOWMINIMIZEDDFA{
+  /* margin:auto;*/
+}
+/* Button */
+#toshowMinimizedDFA {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #fffdfd;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#toshowMinimizedDFA span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#toshowMinimizedDFA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#toshowMinimizedDFA:hover span {
+  padding-right: 25px;
+}
+
+#toshowMinimizedDFA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* Button */
+#tohideMinimizedDFA {
+  display:none;
+  /* display: inline-block; */
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#tohideMinimizedDFA span {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#tohideMinimizedDFA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#tohideMinimizedDFA:hover span {
+  padding-right: 25px;
+}
+
+#tohideMinimizedDFA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* ////////////////////////////////////////////////////////// */
+.production-row input {
+  max-width: 100px;
+}
+
+/* div.footer p {
+  margin: 5px;
+} */
+
+.footer {
+  text-align: center;
+  padding-bottom: 0px;
+}
+.footer-list{
+  list-style-type: none;
+  display: inline;
+}
+
+.footer-nav{
+  color: #191A19;
+  text-align: right;
+}
+
+.footer-nav-item-subto{
+  float:left;
+  margin-right: 15px;
+}
+
+.footer-nav-item-subby{
+  /*float:right; */
+  margin-left: 10px;
+}
+.container1{
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom:0px ;
+}
+.container1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.container1 li{
+  font-size: 15px;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration: none;
+}
